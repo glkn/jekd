@@ -5,7 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "test": "mocha src/index.test.js",
-    "semantic-release": "if [ \"$TRAVIS_BRANCH\" = \"master\" ] semantic-release pre && npm publish && semantic-release post"
+    "semantic-release": "if [ \"$TRAVIS_BRANCH\" = \"master\" ] then semantic-release pre && npm publish && semantic-release post; fi"
   },
   "keywords": [
     "dependency injection",
