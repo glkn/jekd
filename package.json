@@ -1,10 +1,11 @@
 {
   "name": "jekd",
-  "version": "0.1.0",
+  "version": "0.0.0-semantic",
   "description": "Dependency injection library that makes it possible to unit-test application easily by giving ability to change injected objects easily at the testing time",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha src/index.test.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "keywords": [
     "dependency injection",
@@ -13,12 +14,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/glkn/jekd.git"
+    "url": "https://github.com/glkn/jekd.git"
   },
   "author": "Alexey Galkin <aagalkin@gmail.com> (https://github.com/glkn)",
   "license": "MIT",
   "bugs": {
-  	"url": "https://github.com/glkn/jekd/issues"
+    "url": "https://github.com/glkn/jekd/issues"
   },
-  "homepage": "https://github.com/glkn/jekd"
+  "homepage": "https://github.com/glkn/jekd",
+  "devDependencies": {
+    "chai": "3.5.0",
+    "mocha": "2.4.5",
+    "semantic-release": "^4.3.5"
+  }
 }
