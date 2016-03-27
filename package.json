@@ -1,0 +1,24 @@
+{
+  "name": "jekd",
+  "version": "0.1.0",
+  "description": "Dependency injection library that makes it possible to unit-test application easily by giving ability to change injected objects easily at the testing time",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dependency injection",
+    "di",
+    "unit-testing"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/glkn/jekd.git"
+  },
+  "author": "Alexey Galkin <aagalkin@gmail.com> (https://github.com/glkn)",
+  "license": "MIT",
+  "bugs": {
+  	"url": "https://github.com/glkn/jekd/issues"
+  },
+  "homepage": "https://github.com/glkn/jekd"
+}
