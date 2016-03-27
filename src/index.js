@@ -1,5 +1,10 @@
 var Container = require('./container');
 
+var containers = {};
+
 module.exports = function(name) {
-    return new Container(name);
+    if ( !containers[name] ) {
+        containers[name] = new Container(name);
+    }
+    return containers[name];
 };
