@@ -1,3 +1,6 @@
 module.exports = function (name) {
-    this.name = name;
+    Object.defineProperty(this, 'name', {
+        value: name,
+        writeable: false
+    });
 };
