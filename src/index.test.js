@@ -23,3 +23,25 @@ describe('container', function () {
         expect(container.name).to.not.equal('something');
     });
 });
+
+describe('injecting values', function () {
+    var container;
+    before(function () {
+        jekd.purge();
+        container = jekd.create('container');
+    });
+
+    it('should return value from container', function(){
+        container.value('test', 'passed');
+        var result = container.get('test');
+        expect(result).to.equal('passed');
+    });
+
+    it('should return last set value', function(){
+        container.value('test', 'passed1');
+        container.value('test', 'passed2');
+        container.value('test', 'passed3');
+        var result = container.get('test');
+        expect(result).to.equal('passed3');
+    });
+});
